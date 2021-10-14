@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> JS  ES 2</title>
+    </head>
+    <body>
+        <h1>JS ES 2</h1>
+        <h2>Static HTML page: exercise 1 but with JQuery</h2>
+
+        <div id="div1"></div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            var a=0;
+            //document.getElementById("div1").innerHTML = "ciao";
+            $("#div1").html("Non premere il bottone!");
+
+            var red = true;
+            $("body")
+            .append($("<button id = 'btn1'>CLICCAMI</button>")).click(function(){
+                $("#div1").attr("style", "background-color: rgb(255, 0, 255)");
+                $("#div1").html("Ti avevo detto di non premere Pota");
+                if(red){
+                    $("#btn1").attr("style", "background-color: RED");
+                    red= false;
+                }else{
+                    $("#btn1").remuveAttr("style");
+                    red= true;
+                }
+            });
+            
+            console.log($("#div1"));
+            console.log($("#div"));
+
+            $("body").append($("<h3>Aggiunto un titolo H3</h3>"));
+           
+
+        </script>
+    </body>
+</html>
